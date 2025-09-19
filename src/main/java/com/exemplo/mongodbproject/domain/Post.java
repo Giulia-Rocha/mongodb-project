@@ -4,6 +4,7 @@ import com.exemplo.mongodbproject.dto.AuthorDTO;
 import com.exemplo.mongodbproject.dto.CommentDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -16,6 +17,7 @@ import java.util.List;
 @Document
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Post implements Serializable {
     @Id
     private String id;
