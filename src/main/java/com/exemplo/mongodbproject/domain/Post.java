@@ -1,6 +1,7 @@
 package com.exemplo.mongodbproject.domain;
 
 import com.exemplo.mongodbproject.dto.AuthorDTO;
+import com.exemplo.mongodbproject.dto.CommentDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -8,7 +9,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 @Document
 @Data
 @AllArgsConstructor
@@ -21,4 +25,13 @@ public class Post implements Serializable {
     private AuthorDTO author;
 
 
+    private List<CommentDTO> comments = new ArrayList<>();
+
+    public Post(String id, Date date, String title, String body, AuthorDTO author) {
+        this.id = id;
+        this.date = date;
+        this.title = title;
+        this.body = body;
+        this.author = author;
+    }
 }
