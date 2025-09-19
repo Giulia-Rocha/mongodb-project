@@ -1,5 +1,6 @@
 package com.exemplo.mongodbproject.domain;
 
+import com.exemplo.mongodbproject.dto.AuthorDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -17,7 +18,7 @@ public class Post implements Serializable {
     private Date date;
     private String title;
     private String body;
-    private User author;
+    private AuthorDTO author;
 
 
 }
